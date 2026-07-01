@@ -9,7 +9,7 @@ const SLUGS = [
 ];
 
 export async function GET() {
-  const resources = SLUGS.map((slug) => `https://x402-ai.vercel.app/api/${slug}`);
+  const resources = SLUGS.map((slug) => `https://x402-ai-peach.vercel.app/api/${slug}`);
 
   return NextResponse.json({
     version: 1,
