@@ -1,0 +1,8 @@
+{
+  "framework": "nextjs",
+  "env": {
+    "EVM_ADDRESS": "0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c",
+    "RAPIDAPI_KEY": "5592fe86e8msh8315b8ddfba9c77p1aa30bjsn65a112f2cece",
+    "FACILITATOR_URL": "https://facilitator.payai.network"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "x402 AI APIs",
+    "version": "1.0.0",
+    "description": "Paid AI API endpoints powered by x402 micropayments."
+  },
+  "servers": [{"url": "https://x402-ai.vercel.app"}],
+  "x402": {
+    "accepts": [
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.075000","resource":"https://x402-ai.vercel.app/api/safevision","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.050000","resource":"https://x402-ai.vercel.app/api/discord-shield","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.050000","resource":"https://x402-ai.vercel.app/api/json-repair","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.100000","resource":"https://x402-ai.vercel.app/api/lodestar-price","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.150000","resource":"https://x402-ai.vercel.app/api/gpt5","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.125000","resource":"https://x402-ai.vercel.app/api/copilot","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.075000","resource":"https://x402-ai.vercel.app/api/alt-text","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.075000","resource":"https://x402-ai.vercel.app/api/edge-tts","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.125000","resource":"https://x402-ai.vercel.app/api/gemini","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.150000","resource":"https://x402-ai.vercel.app/api/claude","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.125000","resource":"https://x402-ai.vercel.app/api/xai","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}},
+      {"scheme":"exact","network":"base-sepolia","maxAmountRequired":"0.100000","resource":"https://x402-ai.vercel.app/api/pokemon-auth","mimeType":"application/json","payTo":"0x5e6E0aa1dE2FD4A4def32CD39aD3F775461E512c","extra":{"name":"USD Coin","version":"2"}}
+    ]
+  },
+  "paths": {
+    "/api/safevision": {"get":{"summary":"Proxy to safevision","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/discord-shield": {"get":{"summary":"Proxy to kordhub-discord-webhook-shield-formatter","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/json-repair": {"get":{"summary":"Proxy to kordhub-ai-json-repair-formatter","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/lodestar-price": {"get":{"summary":"Proxy to lodestar-ai-price","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/gpt5": {"get":{"summary":"Proxy to gpt-5-5","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/copilot": {"get":{"summary":"Proxy to copilot11","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/alt-text": {"get":{"summary":"Proxy to ai-image-alt-text-generator","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/edge-tts": {"get":{"summary":"Proxy to streamlined-edge-tts","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/gemini": {"get":{"summary":"Proxy to gemini-ai-all-models","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/claude": {"get":{"summary":"Proxy to claude-ai-all-models","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/xai": {"get":{"summary":"Proxy to xai-all-models","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}},
+    "/api/pokemon-auth": {"get":{"summary":"Proxy to pokemon-card-authenticator-ai2","responses":{"200":{"description":"Success"},"402":{"description":"Payment required"}}}}
+  }
+}
