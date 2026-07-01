@@ -57,7 +57,34 @@ export async function GET() {
         },
       },
       responses: {
-        "200": { description: "Success" },
+        "200": {
+          description: "Successful response",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  id: { type: "string", description: "Response ID" },
+                  choices: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        message: {
+                          type: "object",
+                          properties: {
+                            role: { type: "string" },
+                            content: { type: "string" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
         "402": { description: "Payment required" },
       },
     };
