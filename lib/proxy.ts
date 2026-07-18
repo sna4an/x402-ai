@@ -22,36 +22,36 @@ export async function proxy(req: NextRequest, host: string, price: string) {
             extra: { name: "USD Coin", version: "2" },
           },
         ],
-    extensions: {
-      bazaar: {
-        info: {
-          input: {
-            type: "http",
-            method: "POST",
-            bodyType: "json",
-            body: {
+        extensions: {
+          bazaar: {
+            info: {
+              input: {
+                type: "http",
+                method: "POST",
+                bodyType: "json",
+                body: {
+                  type: "object",
+                  properties: {
+                    query: { type: "string", description: "Input parameter" }
+                  }
+                }
+              },
+              output: {
+                type: "object",
+                properties: {
+                  result: { type: "object", description: "API response data" }
+                },
+                example: { result: { data: "example response" } }
+              }
+            },
+            schema: {
               type: "object",
               properties: {
-                query: { type: "string", description: "Input parameter" }
+                result: { type: "object", description: "API response data" }
               }
             }
-          },
-          output: {
-            type: "object",
-            properties: {
-              result: { type: "object", description: "API response data" }
-            },
-            example: { result: { data: "example response" } }
-          }
-        },
-        schema: {
-          type: "object",
-          properties: {
-            result: { type: "object", description: "API response data" }
           }
         }
-      }
-    }
       })
     ).toString("base64");
     return NextResponse.json(
